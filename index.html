@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Tracking Everything Everywhere All at Once">
+  <meta property="og:title" content="Tracking Everything Everywhere All at Once">
+  <meta property="og:description" content="Tracking Everything Everywhere All at Once">
+  <meta property="og:image" content="https://omnimotion.github.io/static/images/open_graph.jpg">
+  <meta property="twitter:title" content="Tracking Everything Everywhere All at Once">
+  <meta property="twitter:description" content="Tracking Everything Everywhere All at Once">
+  <meta property="twitter:image" content="https://omnimotion.github.io/static/images/open_graph.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="motion, tracking">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking Everything Everywhere All at Once</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D65ZW4CJYF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-D65ZW4CJYF');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="./static/js/jquery-3.6.4.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/lazy.js"></script>
+  <script src="./static/js/faster.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Tracking Everything Everywhere All at Once</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://qianqianwang68.github.io/">Qianqian Wang</a><sup>1,2</sup>, </span>
+            <span class="author-block">
+              <a href="https://yuyuchang.github.io/">Yen-Yu Chang</a><sup>1</sup>, </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~ruojin/">Ruojin Cai</a><sup>1</sup>, </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a><sup>2</sup>, </span> 
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~bharathh/">Bharath Hariharan</a><sup>1</sup>, </span><br>
+            <span class="author-block">
+              <a href="https://holynski.org/">Aleksander Holynski</a><sup>2,3</sup>, </span>
+            <span class="author-block">
+              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a><sup>1,2</sup> </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Cornell University &nbsp; </span>
+            <span class="author-block"><sup>2</sup>Google Research &nbsp; </span>
+            <span class="author-block"><sup>3</sup>UC Berkeley</span>
+
+          </div>
+          <h1 style="font-size:24px">ICCV 2023 (<b>Oral, Best Student Paper</b>)</h1>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2306.05422"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=KHoAG3gA024"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="#interactive_demo"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fa fa-basketball-ball"></i>
+                  </span>
+                  <span>Demo</span>
+                  </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/qianqianwang68/omnimotion"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three columns */
+        grid-template-rows: repeat(2, 1fr); /* Two rows */
+        gap: 0px 4px; /* Gap between videos */
+        width: 80%; /* Set the container width to 80% */
+        margin: 0 auto; /* Center the container horizontally */
+    }
+
+    .video-grid video {
+        width: 100%; /* Videos fill the container width */
+        height: auto;
+    }
+</style>
+
+<section>
+  <div class="video-grid">
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/kangaroo.jpg" preload="auto">
+              <source src="static/videos/kangaroo.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/swing.jpg" preload="auto">
+              <source src="static/videos/swing.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/rollerblade.jpg" preload="auto">
+              <source src="static/videos/rollerblade.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/train.jpg" preload="auto">
+              <source src="static/videos/train.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/horsejump-low.jpg" preload="auto">
+              <source src="static/videos/horsejump-low.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video muted playsinline autoplay loop poster="static/images/butterfly.jpg" preload="auto">
+              <source src="static/videos/butterfly.mp4" type="video/mp4">
+          </video>
+      </div>
+  </div>
+  <div class="columns is-centered has-text-centered">
+    <p style="margin-top: 10px; text-align: center;">
+     OmniMotion jointly tracks all points in a video across all frames, <i>even through occlusions</i>.</p>
+  </div>
+</section>
+
+<br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          We present a new test-time optimization method for estimating dense and long-range motion from a video sequence. Prior optical flow or particle video tracking algorithms typically operate within limited temporal windows, struggling to track through occlusions and maintain global consistency of estimated motion trajectories. We propose a complete and globally consistent motion representation, dubbed <b>OmniMotion</b>, that allows for accurate, full-length motion estimation of every pixel in a video. OmniMotion represents a video using a quasi-3D canonical volume and performs pixel-wise tracking via bijections between local and canonical space. This representation allows us to ensure global consistency, track through occlusions, and model any combination of camera and object motion. Extensive evaluations on the TAP-Vid benchmark and real-world footage show that our approach outperforms prior state-of-the-art methods by a large margin both quantitatively and qualitatively.
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <a id="overview_video"></a>
+          <iframe
+            src="https://www.youtube.com/embed/KHoAG3gA024">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--/ Paper video. -->
+</section>
+
+<br>
+
+<style>
+    .video-grid-two-cols {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns */
+        gap: 10px; /* Gap between videos */
+        width: 60%; /* Set the container width to 60% */
+        margin: 0 auto; /* Center the container horizontally */
+    }
+
+    .video-grid-two-cols video {
+        width: 100%; /* Videos fill the container width */
+        height: auto;
+    }
+</style>
+
+<div class="columns is-centered has-text-centered">
+  <h2 class="title is-3"> More Results</h2>
+</div>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="carousel-extra-padding">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-swing_tire">
+            <video class="carousel-video" id="swing_tire" controls muted loop playsinline height="100%" poster="static/images/swing_tire.jpg" data-src="./static/videos/swing_tire.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-tennis">
+            <video class="carousel-video" id="tennis" controls muted loop playsinline height="100%" poster="static/images/tennis.jpg" data-src="./static/videos/tennis.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-libby">
+            <video class="carousel-video" id="libby" controls muted loop playsinline height="100%" poster="static/images/libby.jpg" data-src="./static/videos/libby.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-soapbox">
+            <video class="carousel-video" id="soapbox" controls muted loop playsinline height="100%" poster="static/images/soapbox.jpg" data-src="./static/videos/soapbox.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-snowy-trees">
+            <video class="carousel-video" id="snowy-trees" controls muted loop playsinline height="100%" poster="static/images/snowy-trees.jpg" data-src="./static/videos/snowy-trees.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-birch">
+            <video class="carousel-video" id="birch" controls muted loop playsinline height="100%" poster="static/images/birch.jpg" data-src="./static/videos/birch.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Trail visualization</p>
+  </div>
+</section>
+<br>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="carousel-extra-padding">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-giraffe">
+            <video class="carousel-video" id="giraffe" controls muted loop playsinline height="100%" poster="static/images/giraffe.jpg" data-src="./static/videos/giraffe.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-india">
+            <video class="carousel-video" id="india" controls muted loop playsinline height="100%" poster="static/images/india.jpg" data-src="./static/videos/india.mp4">
+            </video>
+          </div>
+          <div class="item item-longboard">
+            <video class="carousel-video" id="longboard" controls muted loop playsinline height="100%" poster="static/images/longboard.jpg" data-src="./static/videos/longboard.mp4">
+            </video>
+          </div>
+          <div class="item item-squirrel">
+            <video class="carousel-video" id="squirrel" controls muted loop playsinline height="100%" poster="static/images/squirrel.jpg" data-src="./static/videos/squirrel.mp4">
+            </video>
+          </div>
+          <div class="item item-hike">
+            <video class="carousel-video" id="hike" controls muted loop playsinline height="100%" poster="static/images/hike.jpg" data-src="./static/videos/hike.mp4" type="video/mp4">
+            </video>
+          </div>   
+          <div class="item item-flamingo">
+            <video class="carousel-video" id="flamingo" controls muted loop playsinline height="100%" poster="static/images/flamingo.jpg" data-src="./static/videos/flamingo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-walking">
+            <video class="carousel-video" id="walking" controls muted loop playsinline height="100%" poster="static/images/walking.jpg" data-src="./static/videos/walking.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Point visualization. Points detected as occluded are marked as "+" </p>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+
+<section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Interactive Demo</h2>
+       <a id="interactive_demo"></a>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p> Use our interactive demo to inspect the correspondences generated by our method. Simply click on any location in the query frame (left), and observe its corresponding location in the target frame (right). Use the slider to switch to a different target frame, and press the 'clear points' button to remove all points. Points that are identified as occluded are displayed as crosses '+' instead of dots '●'.
+            Note that this demo showcases correspondences for a single query frame, but our representation captures all correspondences from any frame to any other frame in a video. 
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero">
+  <div class="hero-body">
+    <div class="">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="columns is-centered" style="position: relative;">
+            <div class="column is-half image-board">
+              <img style="width: 100%;" class="clickable-image" src="static/demo/swing/00000.jpg" alt="Image">
+            <div id="initial-dot"></div>
+          <!-- <div class="red-cross"></div> -->
+            </div>
+            <div class="column is-half image-board move">
+            <img style="width: 100%;" class="clickable-image" id="frame" src="static/demo/swing/00001.jpg" alt="Frame 1">
+            <input style="margin: 0;" class="slider is-fullwidth is-large is-info" type="range" id="slider" min="1" step="1" value="0" class="slider">
+          </div>
+          </div>
+          <div class="columns is-centered">
+          <div id="clear-btn" class="button">clear points</div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+
+<section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> Pseudo-Depth Visualization</h2>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+              <p>Since our method optimizes an underlying quasi-3D representation, we can extract a pseudo-depth visualization showing the relative ordering of different parts of the scene. <font color="blue"><b>Blue</b></font>: near, <font color="red"><b>Red</b></font>: far.</p>
+        </div>
+      </div>
+  </div>
+</div>
+
+</section>
+
+<br>
+<!-- <br> -->
+
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="carousel-extra-padding">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-lab-coat_pseudo_depth">
+            <video class="carousel-video" id="lab-coat_pseudo_depth" controls muted loop playsinline height="100%" poster="static/images/lab-coat_pseudo_depth.jpg" data-src="./static/videos/lab-coat_pseudo_depth.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-swing_pseudo_depth">
+            <video class="carousel-video" id="swing_pseudo_depth" controls muted loop playsinline height="100%" poster="static/images/swing_pseudo_depth.jpg" data-src="./static/videos/swing_pseudo_depth.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-car-roundabout_pseudo_depth">
+            <video class="carousel-video" id="car-roundabout_pseudo_depth" controls muted loop playsinline height="100%" poster="static/images/car-roundabout_pseudo_depth.jpg" data-src="./static/videos/car-roundabout_pseudo_depth.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-butterfly_pseudo_depth">
+            <video class="carousel-video" id="butterfly_pseudo_depth" controls muted loop playsinline height="100%" poster="static/images/butterfly_pseudo_depth.jpg" data-src="./static/videos/butterfly_pseudo_depth.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br>
+<br>
+<br>
+
+
+<section>
+  <div class="columns is-centered has-text-centered">
+    <h2 class="title is-3"> Failure Cases</h2>
+  </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+              <p>Like many motion estimation methods, our method struggles with rapid and highly non-rigid motion as well as thin structures. In these scenarios, pairwise correspondence methods can fail to provide enough reliable correspondences for our method to compute accurate global motion. </p>
+        </div>
+      </div>
+  </div>
+</div>
+  <br>
+  <div class="video-grid-two-cols">
+      <div>
+          <video class="carousel-video" controls muted loop playsinline poster="static/images/bike-packing.jpg" data-src="static/videos/bike-packing.mp4" type="video/mp4">
+          </video>
+      </div>
+      <div>
+          <video class="carousel-video" controls muted loop playsinline poster="static/images/dog-agility.jpg" data-src="static/videos/dog-agility.mp4" type="video/mp4">
+          </video>
+      </div>
+  </div>
+</section>
+
+<br>
+
+<section class="section" id="Acknowledgements">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">Acknowledgements</h2>
+    We thank Jon Barron, Richard Tucker, Vickie Ye, Zekun Hao, Xiaowei Zhou, Steve Seitz, Brian Curless, and Richard Szeliski for their helpful input and assistance. This work was supported in part by an NVIDIA academic hardware grant and by the National Science Foundation (IIS-2008313 and IIS-2211259). Qianqian Wang was supported in part by a Google PhD Fellowship.
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3">BibTeX</h2>
+    <pre><code>
+@inproceedings{wang2023omnimotion,
+  title     = {Tracking Everything Everywhere All at Once},
+  author    = {Wang, Qianqian and Chang, Yen-Yu and Cai, Ruojin and Li, Zhengqi and Hariharan, Bharath and Holynski, Aleksander and Snavely, Noah},
+  booktitle = {International Conference on Computer Vision},
+  year      = {2023}
+}
+</code></pre>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div align="center" class="container">
+    <div class="columns is-centered">
+        <div class="content">
+            This website is borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.
+        </div>
+      </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
