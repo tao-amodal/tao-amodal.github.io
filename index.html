@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Tracking Any Object Amodally">
+  <meta property="og:title" content="Tracking Any Object Amodally">
+  <meta property="og:description" content="Tracking Any Object Amodally">
+  <meta property="og:image" content="https://omnimotion.github.io/static/images/open_graph.jpg">
+  <meta property="twitter:title" content="Tracking Any Object Amodally">
+  <meta property="twitter:description" content="Tracking Any Object Amodally">
+  <meta property="twitter:image" content="https://omnimotion.github.io/static/images/open_graph.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="motion, tracking">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tracking Any Object Amodally</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D65ZW4CJYF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-D65ZW4CJYF');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="./static/js/jquery-3.6.4.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/lazy.js"></script>
+  <script src="./static/js/faster.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">Tracking Any Object Amodally</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block">
+                <a href="https://qianqianwang68.github.io/">Qianqian Wang</a><sup>1,2</sup>, </span> -->
+              <!-- <span class="author-block">
+                <a href="https://yuyuchang.github.io/">Yen-Yu Chang</a><sup>1</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.cs.cornell.edu/~ruojin/">Ruojin Cai</a><sup>1</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.cs.cornell.edu/~zl548/">Zhengqi Li</a><sup>2</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.cs.cornell.edu/~bharathh/">Bharath Hariharan</a><sup>1</sup>, </span><br>
+              <span class="author-block">
+                <a href="https://holynski.org/">Aleksander Holynski</a><sup>2,3</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a><sup>1,2</sup> </span> -->
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <!-- <span class="author-block"><sup>1</sup>Cornell University &nbsp; </span>
+              <span class="author-block"><sup>2</sup>Google Research &nbsp; </span>
+              <span class="author-block"><sup>3</sup>UC Berkeley</span> -->
+
+            </div>
+            <!-- <h1 style="font-size:24px">ICCV 2023 (<b>Oral, Best Student Paper</b>)</h1> -->
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="index.html" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper (Incoming)</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=KHoAG3gA024"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+                <!-- Demo Link. -->
+                <!-- <span class="link-block">
+                  <a href="#interactive_demo" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-basketball-ball"></i>
+                    </span>
+                    <span>Demo</span>
+                  </a>
+                </span> -->
+                <!-- Code Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://github.com/qianqianwang68/omnimotion"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span> -->
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="#TAO-Amodal" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-database"></i>
+                    </span>
+                    <span>Explore TAO-Amodal</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* Three columns */
+      grid-template-rows: repeat(1, 1fr);
+      /* Two rows */
+      gap: 0px 4px;
+      /* Gap between videos */
+      width: 80%;
+      /* Set the container width to 80% */
+      margin: 0 auto;
+      /* Center the container horizontally */
+    }
+
+    .video-grid video {
+      width: 100%;
+      /* Videos fill the container width */
+      height: auto;
+    }
+  </style>
+
+  <section>
+    <div class="video-grid">
+      <div>
+        <video muted playsinline autoplay loop poster="static/images/car_and_bus.png" preload="auto">
+          <source src="static/videos/car-2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video muted playsinline autoplay loop poster="static/images/cattle-7.png" preload="auto">
+          <source src="static/videos/cattle-7_both.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video muted playsinline autoplay loop poster="static/images/guitar.png" preload="auto">
+          <source src="static/videos/guitar-4.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- <div>
+        <video muted playsinline autoplay loop poster="static/images/car_and_bus.png" preload="auto">
+          <source src="static/videos/car_and_bus_edit.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video muted playsinline autoplay loop poster="static/images/horsejump-low.jpg" preload="auto">
+          <source src="static/videos/horsejump-low.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video muted playsinline autoplay loop poster="static/images/butterfly.jpg" preload="auto">
+          <source src="static/videos/butterfly.mp4" type="video/mp4">
+        </video>
+      </div> -->
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <p style="margin-top: 10px; text-align: center;">
+        TAO-Amodal dataset features diverse (880 categories) annotations for both <br>
+        <i> Traditional tracking (top) and Amodal tracking (bottom)</i>.
+      </p>
+    </div>
+  </section>
+
+  <br>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Amodal perception, the ability to comprehend complete object structures from partial visibility, is a
+              fundamental skill, even for infants.
+              Its significance extends to applications like autonomous driving, where a clear understanding of heavily
+              occluded objects is essential.
+              However, modern detection and tracking algorithms often overlook this critical capability, perhaps due to
+              the prevalence of <i>modal</i> annotations
+              in most datasets. To address the scarcity of amodal data, we introduce the TAO-Amodal benchmark, featuring
+              880 diverse categories in thousands of
+              video sequences. Our dataset includes <i>amodal</i> and modal bounding boxes for visible and occluded
+              objects, including objects that are partially
+              out-of-frame. To enhance amodal tracking with object permanence, we leverage a lightweight plug-in module,
+              the amodal expander, to transform standard,
+              modal trackers into amodal ones through fine-tuning on a few hundred video sequences with data
+              augmentation. We achieve a 3.3% and 1.6% improvement on
+              the detection and tracking of occluded objects on TAO-Amodal. When evaluated on people, our method
+              produces dramatic improvements of <b>2x</b>
+              compared to state-of-the-art modal baselines.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Paper video. -->
+      <!-- <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <a id="overview_video"></a>
+            <iframe src="https://www.youtube.com/embed/KHoAG3gA024">
+            </iframe>
+          </div>
+        </div> -->
+    </div>
+    </div>
+    <!--/ Paper video. -->
+  </section>
+
+  <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+  <section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3"> Traditional vs. Amodal Tracking </h2>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p><b>Traditional percetion (top)</b> concentrate on identifying
+              visible segments. Consequently, they face perculiar outputs such as vanishing bounding boxes or tiny box
+              sizes under occlusion scenarios. <b>Amodal
+                perception (bottom)</b> advances beyond conventional approaches by inferring complete object
+              boundaries, even
+              when
+              certain portions are occluded.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="static/images/teaser_final.png" alt="Teaser" style="width:80%;">
+      </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <style>
+      .video-grid-two-cols {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+        gap: 10px;
+        /* Gap between videos */
+        width: 60%;
+        /* Set the container width to 60% */
+        margin: 0 auto;
+        /* Center the container horizontally */
+      }
+
+      .video-grid-two-cols video {
+        width: 100%;
+        /* Videos fill the container width */
+        height: auto;
+      }
+    </style>
+
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" id="TAO-Amodal"> TAO-Amodal Dataset</h2>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <div class="publication-links">
+        <!-- PDF Link. -->
+        <span class="link-block">
+          <a href="dataset.html" class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fas fa-database"></i>
+            </span>
+            <span>More examples (amodal)</span>
+          </a>
+        </span>
+      </div>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p>Our dataset augments the <a href="https://taodataset.org/">TAO dataset</a> with amodal bounding box
+              annotations for fully
+              invisible, out-of-frame, and occluded objects across 880 categories. Note that this implies TAO-Amodal
+              also
+              includes modal
+              segmentation masks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <section class="hero is-light is-small" s>
+      <div class="hero-body">
+        <div class="container">
+          <div class="carousel-extra-padding">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-swing_tire">
+                <video class="carousel-video" id="swing_tire" controls muted loop playsinline height="100%"
+                  poster="static/images/truck-10.png"
+                  data-src="./dataset_homepage_videos/dataset_truck-10_interpolation.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-libby">
+                <video class="carousel-video" id="libby" controls muted loop playsinline height="100%"
+                  poster="static/images/microphone.png" data-src="./dataset_homepage_videos/microphone_slow.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-soapbox">
+                <video class="carousel-video" id="soapbox" controls muted loop playsinline height="100%"
+                  poster="static/images/rabbit.png" data-src="./dataset_homepage_videos/rabbit-2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-snowy-trees">
+                <video class="carousel-video" id="snowy-trees" controls muted loop playsinline height="100%"
+                  poster="static/images/pen.png" data-src="./dataset_homepage_videos/pen-1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-birch">
+                <video class="carousel-video" id="birch" controls muted loop playsinline height="100%"
+                  poster="static/images/monkey.png" data-src="./dataset_homepage_videos/monkey.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Traditional (Modal) Box</p> -->
+      </div>
+    </section>
+    <br>
+
+    <!-- <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div class="carousel-extra-padding">
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item item-giraffe">
+              <video class="carousel-video" id="giraffe" controls muted loop playsinline height="100%"
+                poster="static/images/giraffe.jpg" data-src="./static/videos/giraffe.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-india">
+              <video class="carousel-video" id="india" controls muted loop playsinline height="100%"
+                poster="static/images/india.jpg" data-src="./static/videos/india.mp4">
+              </video>
+            </div>
+            <div class="item item-longboard">
+              <video class="carousel-video" id="longboard" controls muted loop playsinline height="100%"
+                poster="static/images/longboard.jpg" data-src="./static/videos/longboard.mp4">
+              </video>
+            </div>
+            <div class="item item-squirrel">
+              <video class="carousel-video" id="squirrel" controls muted loop playsinline height="100%"
+                poster="static/images/squirrel.jpg" data-src="./static/videos/squirrel.mp4">
+              </video>
+            </div>
+            <div class="item item-hike">
+              <video class="carousel-video" id="hike" controls muted loop playsinline height="100%"
+                poster="static/images/hike.jpg" data-src="./static/videos/hike.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-flamingo">
+              <video class="carousel-video" id="flamingo" controls muted loop playsinline height="100%"
+                poster="static/images/flamingo.jpg" data-src="./static/videos/flamingo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="item item-walking">
+              <video class="carousel-video" id="walking" controls muted loop playsinline height="100%"
+                poster="static/images/walking.jpg" data-src="./static/videos/walking.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 5px; text-align: center; margin-bottom: -15px;">Amodal Box</p>
+    </div>
+  </section> -->
+
+    <br>
+
+    <!-- <section>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3">Interactive Demo</h2>
+      <a id="interactive_demo"></a>
+    </div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p> Use our interactive demo to inspect the correspondences generated by our method. Simply click on any
+              location in the query frame (left), and observe its corresponding location in the target frame (right).
+              Use the slider to switch to a different target frame, and press the 'clear points' button to remove all
+              points. Points that are identified as occluded are displayed as crosses '+' instead of dots '●'.
+              Note that this demo showcases correspondences for a single query frame, but our representation captures
+              all correspondences from any frame to any other frame in a video.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="">
+        <div class="columns is-centered">
+          <div class="column is-four-fifths">
+            <div class="columns is-centered" style="position: relative;">
+              <div class="column is-half image-board">
+                <img style="width: 100%;" class="clickable-image" src="static/demo/swing/00000.jpg" alt="Image">
+                <div id="initial-dot"></div>
+              </div>
+              <div class="column is-half image-board move">
+                <img style="width: 100%;" class="clickable-image" id="frame" src="static/demo/swing/00001.jpg"
+                  alt="Frame 1">
+                <input style="margin: 0;" class="slider is-fullwidth is-large is-info" type="range" id="slider" min="1"
+                  step="1" value="0" class="slider">
+              </div>
+            </div>
+            <div class="columns is-centered">
+              <div id="clear-btn" class="button">clear points</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <section>
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3"> Amodal Expander</h2>
+      </div>
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="content has-text-justified">
+              <p>Our Amodal Expander serves as a plug-in module that can ``amodalize" any existing detector or tracker
+                with limited (amodal) training data. Here we provide qualitative results of both modal (top) and amodal
+                (bottom) predictions from amodal expander.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <br>
+
+
+
+    <section class="hero is-light is-small">
+      <div class="hero-body">
+        <div class="container">
+          <div class="carousel-extra-padding">
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item item-lab-coat_pseudo_depth">
+                <video class="carousel-video" id="lab-coat_pseudo_depth" controls muted loop playsinline height="100%"
+                  poster="static/images/ae_car.png" data-src="./static/videos/ae_car.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-swing_pseudo_depth">
+                <video class="carousel-video" id="swing_pseudo_depth" controls muted loop playsinline height="100%"
+                  poster="static/images/ae_people.png" data-src="./static/videos/ae_people-1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-car-roundabout_pseudo_depth">
+                <video class="carousel-video" id="car-roundabout_pseudo_depth" controls muted loop playsinline
+                  height="100%" poster="static/images/ae_book.png" data-src="./static/videos/ae_book.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-butterfly_pseudo_depth">
+                <video class="carousel-video" id="butterfly_pseudo_depth" controls muted loop playsinline height="100%"
+                  poster="static/images/ae_left_side_car.png" data-src="./static/videos/ae_left_side_car.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-ae_counter_girl">
+                <video class="carousel-video" id="ae_counter_girl" controls muted loop playsinline height="100%"
+                  poster="static/images/ae_counter_girl.png" data-src="./static/videos/ae_counter_girl-1.mp4"
+                  type="video/mp4">
+                </video>
+              </div>
+              <div class="item item-ae_diverse">
+                <video class="carousel-video" id="ae_ae_diverse" controls muted loop playsinline height="100%"
+                  poster="static/images/ae_zebra.png" data-src="./static/videos/ae_diverse-1.mp4" type="video/mp4">
+                </video>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <br>
+
+    <section class="section" id="Acknowledgements">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3">Acknowledgements</h2>
+        Incoming due to anonymity.
+      </div>
+    </section>
+
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title is-3">BibTeX</h2>
+        <pre><code>Incoming...
+</code></pre>
+      </div>
+    </section>
+
+
+
+    <footer class="footer">
+      <div align="center" class="container">
+        <div class="columns is-centered">
+          <div class="content">
+            This website is borrowed from <a href="https://github.com/omnimotion/omnimotion.github.io">Omnimotion</a>.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+</body>
+
+</html>
