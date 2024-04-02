@@ -3,19 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Tracking Any Object Amodally">
-  <meta property="og:title" content="Tracking Any Object Amodally">
-  <meta property="og:description" content="Tracking Any Object Amodally">
+  <meta name="description" content="TAO-Amodal: A Benchmark for Tracking Any Object Amodally">
+  <meta property="og:title" content="TAO-Amodal: A Benchmark for Tracking Any Object Amodally">
+  <meta property="og:description" content="TAO-Amodal: A Benchmark for Tracking Any Object Amodally">
   <meta property="og:image" content="https://tao-amodal.github.io/static/images/webpage_preview.png">
-  <meta property="twitter:title" content="Tracking Any Object Amodally">
-  <meta property="twitter:description" content="Tracking Any Object Amodally">
+  <meta property="twitter:title" content="TAO-Amodal: A Benchmark for Tracking Any Object Amodally">
+  <meta property="twitter:description" content="TAO-Amodal: A Benchmark for Tracking Any Object Amodally">
   <meta property="twitter:image" content="https://tao-amodal.github.io/static/images/webpage_preview.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="keywords"
-    content="TAO-Amodal, Cheng-Yen Hsieh, Wesley Hsieh, cmu, amodal, tracking, tracking any object, occlusion">
+    content="TAO-Amodal, Benchmark, Hsieh, Wesley Hsieh, cmu, amodal, tracking, tracking any object, occlusion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tracking Any Object Amodally</title>
+  <title>TAO-Amodal: A Benchmark for Tracking Any Object Amodally</title>
   <link rel="icon" type="image/x-icon" href="./static/images/car_icon.png">
 
   <!-- Google tag (gtag.js) -->
@@ -59,11 +59,13 @@
               <span class="author-block">
                 <a href="https://WesleyHsieh0806.github.io/">Cheng-Yen (Wesley) Hsieh</a><sup>1</sup>, </span>
               <span class="author-block">
-                <a href="https://www.cs.cmu.edu/~tkhurana/">Tarasha Khurana</a><sup>1</sup>, </span>
+                  <a href="https://www.linkedin.com/in/kaihuac/">Kaihua Chen</a><sup>1</sup>, </span>
               <span class="author-block">
                 <a href="https://www.achaldave.com/">Achal Dave</a><sup>2</sup>, </span>
               <span class="author-block">
-                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a><sup>1</sup>, </span><br>
+                  <a href="https://www.cs.cmu.edu/~tkhurana/">Tarasha Khurana</a><sup>1</sup>, </span>
+              <span class="author-block">
+                <a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a><sup>1</sup> </span><br>
               <!-- <span class="author-block">
                 <a href="https://holynski.org/">Aleksander Holynski</a><sup>2,3</sup>, </span>
               <span class="author-block">
@@ -123,7 +125,7 @@
                     <span class="icon">
                       <i class="fa fa-basketball-ball"></i>
                     </span>
-                    <span>Qulitative Results</span>
+                    <span>Qualitative Results</span>
                   </a>
                 </span>
               </div>
@@ -208,7 +210,7 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Amodal perception, the ability to comprehend complete object structures from partial visibility, is a
+              <!-- Amodal perception, the ability to comprehend complete object structures from partial visibility, is a
               fundamental skill, even for infants.
               Its significance extends to applications like autonomous driving, where a clear understanding of heavily
               occluded objects is essential.
@@ -224,7 +226,19 @@
               augmentation. We achieve a 3.3% and 1.6% improvement on
               the detection and tracking of occluded objects on TAO-Amodal. When evaluated on people, our method
               produces dramatic improvements of <b>2x</b>
-              compared to state-of-the-art modal baselines.
+              compared to state-of-the-art modal baselines. -->
+              Amodal perception, the ability to comprehend complete object structures from partial visibility, is a 
+              fundamental skill, even for infants. Its significance extends to applications like autonomous driving, 
+              where a clear understanding of heavily occluded objects is essential. 
+              However, modern detection and tracking algorithms often overlook this critical capability, 
+              perhaps due to the prevalence of <i>modal</i> annotations in most benchmarks. 
+              To address the scarcity of amodal benchmarks, we introduce TAO-Amodal, 
+              featuring 833 diverse categories in thousands of video sequences. 
+              Our dataset includes <b>amodal</b> and modal bounding boxes for visible and partially or fully occluded objects, 
+              including those that are partially out of the camera frame. 
+              We investigate the current lay of the land in both amodal tracking and detection by benchmarking state-of-the-art modal trackers and amodal segmentation methods. 
+              We find that existing methods, even when adapted for amodal tracking, struggle to detect and track objects under heavy occlusion. 
+              To mitigate this, we explore simple finetuning schemes that can increase the amodal tracking and detection metrics of occluded objects by <b>2.1%</b> and <b>3.3%</b>.
             </p>
           </div>
         </div>
